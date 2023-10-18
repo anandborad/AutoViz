@@ -143,7 +143,8 @@ def AutoViz_Holo(filename, sep=',', depVar='', dfte=None, header=0, verbose=0,
     if save_plot_dir is None:
         mk_dir = os.path.join(".","AutoViz_Plots")
     else:
-        mk_dir = copy.deepcopy(save_plot_dir)
+        # mk_dir = copy.deepcopy(save_plot_dir)
+        mk_dir = save_plot_dir
     if chart_format == 'html' and not os.path.isdir(mk_dir):
         os.mkdir(mk_dir)
     mk_dir = os.path.join(mk_dir,target_dir)
